@@ -43,3 +43,14 @@ There's a few differences between the original and the Typst version that won't
 be changed as I prefer as it is here. Nothing reallty important changes, just
 small typesetting choices. Check the differences
 [here](https://github.com/ecomaikgolf/typst-iaik-master-thesis-template/issues?q=is%3Aissue+is%3Aopen+label%3Adiff)
+
+## Samples
+
+![image](https://github.com/user-attachments/assets/ab29fb56-2fd0-4f8f-8350-308fd7269be8)
+![image](https://github.com/user-attachments/assets/b02843dc-507b-4108-9f9f-00a4be13b92e)
+![image](https://github.com/user-attachments/assets/8ab9dde7-678b-4b59-8a2c-14dc5b0305e2)
+![image](https://github.com/user-attachments/assets/ca700eb5-3c88-4fef-a62f-c2c6cb81a6a5)
+![image](https://github.com/user-attachments/assets/726115da-81f2-4100-ac3b-014044ba3250)
+![image](https://github.com/user-attachments/assets/25db8ec5-05a5-43b5-b649-0bbe0eca4459)
+![image](https://github.com/user-attachments/assets/9d63d990-9c36-4277-a495-95ad5d4767d3)
+![image](https://github.com/user-attachments/assets/f4f3173b-ab1b-4291-92b0-0c1ac9427de6)
