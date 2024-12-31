@@ -36,7 +36,7 @@ partial renderings and previews are even more responsive.
 ## Design
 
 Template closely follows [Maria's LaTeX
-Template](https://extgit.iaik.tugraz.at/castle/student/templates/master-project/-/tree/main/thesis)
+Template](https://extgit.iaik.tugraz.at/castle/student/templates/master-thesis/-/tree/main/thesis)
 design from the institute.
 
 There's a few differences between the original and the Typst version that won't
