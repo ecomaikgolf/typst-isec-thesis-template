@@ -157,7 +157,9 @@
 // Bibliography
 // ----------------------------------------------------------------------------
 
-#bibliography("bibliography.bib")<sec:bibliography>
+// full: true => include all works from the given bibliography files, even
+// those that weren't cited in the document
+#bibliography("bibliography.bib", full: true)<sec:bibliography>
 
 // ----------------------------------------------------------------------------
 // Appendix (Optional)
