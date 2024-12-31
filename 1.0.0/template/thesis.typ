@@ -112,11 +112,13 @@
 
 = Introduction <sec:intro>
 
+
 // ----------------------------------------------------------------------------
 // Background
 // ----------------------------------------------------------------------------
 
 = Background <sec:background>
+
 
 // ----------------------------------------------------------------------------
 // Attack
@@ -124,17 +126,22 @@
 
 = Attack <sec:attack>
 
+
 // ----------------------------------------------------------------------------
 // Evaluation
 // ----------------------------------------------------------------------------
 
-= Evaluation <sec:conclusion>
+= Evaluation <sec:evaluation>
+
 
 // ----------------------------------------------------------------------------
 // Discussion
 // ----------------------------------------------------------------------------
 
 = Discussion <sec:discussion>
+
+What a nice template @typst_ernesto_iaik_template
+
 
 // ----------------------------------------------------------------------------
 // Notation
@@ -157,9 +164,7 @@
 // Bibliography
 // ----------------------------------------------------------------------------
 
-// full: true => include all works from the given bibliography files, even
-// those that weren't cited in the document
-#bibliography("bibliography.bib", full: true)<sec:bibliography>
+#bibliography("bibliography.bib")<sec:bibliography>
 
 // ----------------------------------------------------------------------------
 // Appendix (Optional)
