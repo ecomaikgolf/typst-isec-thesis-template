@@ -311,6 +311,7 @@
 		}
 	}
 
+
 	// --------------------------------------------------------------------------
 	// Bibliography & Citations
 
@@ -355,5 +356,20 @@
 
 	#body
 ]
+
+#let appendix(body) = {
+	show heading.where(level: 1): set heading(supplement: "Appendix")
+	show heading.where(level: 1): set heading(numbering: "A.")
+	show heading.where(level: 2): set heading(numbering: "A.1.")
+	show heading.where(level: 3): set heading(numbering: "A.1.1.")
+	set figure(numbering: num =>
+		numbering("A.1", counter(heading).get().first(), num)
+	)
+	set math.equation(numbering: num =>
+		(numbering("A.1", counter(heading).get().first(), num))
+	)
+	counter(heading).update(0)
+	body
+}
 
 //vim:tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab colorcolumn=81

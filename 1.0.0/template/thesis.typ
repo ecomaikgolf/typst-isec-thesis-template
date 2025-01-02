@@ -168,24 +168,9 @@ What a nice template @typst_ernesto_isec_template
 // ----------------------------------------------------------------------------
 // Appendix (Optional)
 // ----------------------------------------------------------------------------
+#show: appendix
 
-// IGNORE (TODO find a way of hiding this to the user)
-#show heading.where(level: 1): set heading(supplement: "Appendix")
-#show heading.where(level: 1): set heading(numbering: "A.")
-#show heading.where(level: 2): set heading(numbering: "A.1.")
-#show heading.where(level: 3): set heading(numbering: "A.1.1.")
-#set figure(numbering: num =>
-	numbering("A.1", counter(heading).get().first(), num)
-)
-#set math.equation(numbering: num =>
-	(numbering("A.1", counter(heading).get().first(), num))
-)
-#counter(heading).update(0)
-// END IGNORE
+= Code Listings<sec:codelistings>
 
-// Just add a regular section here and it will be an Appendix!
-//
-// = Example
-// This is an appendix
 
 // vim:tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab colorcolumn=81
