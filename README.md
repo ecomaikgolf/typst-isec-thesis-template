@@ -65,7 +65,7 @@ typesetting/design choices. Check the differences
 
 ## Samples
 
-![title](https://github.com/user-attachments/assets/ab29fb56-2fd0-4f8f-8350-308fd7269be8)
+![title](https://github.com/user-attachments/assets/62d3eff1-93db-42c7-ae24-8562eea2948e)
 ![affidavit](https://github.com/user-attachments/assets/b02843dc-507b-4108-9f9f-00a4be13b92e)
 ![acknowledgements](https://github.com/user-attachments/assets/8ab9dde7-678b-4b59-8a2c-14dc5b0305e2)
 ![abstract](https://github.com/user-attachments/assets/ca700eb5-3c88-4fef-a62f-c2c6cb81a6a5)
