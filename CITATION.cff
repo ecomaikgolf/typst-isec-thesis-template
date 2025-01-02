@@ -1,17 +1,18 @@
 cff-version: 1.2.0
-title: Typst IAIK Master's Thesis Template
+title: Typst ISEC Master's Thesis Template
 message: >-
-  If you use this software, please cite it using the
-  metadata from this file.
+  ISEC Typst Template
 type: software
 authors:
   - given-names: Ernesto Martínez García
     email: me@ecomaikgolf.com
-    affiliation: IAIK Graz University of Technology
+    affiliation: ISEC Graz University of Technology
 repository-code: >-
-  https://github.com/ecomaikgolf/typst-iaik-master-thesis-template
+  https://github.com/ecomaikgolf/typst-isec-master-thesis-template
 keywords:
   - typst
   - template
   - master
   - thesis
+  - isec
+  - iaik
