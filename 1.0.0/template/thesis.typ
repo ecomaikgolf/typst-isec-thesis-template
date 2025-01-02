@@ -1,4 +1,4 @@
-#import "@local/iaik-master-thesis-template:1.0.0": *
+#import "@local/isec-master-thesis-template:1.0.0": *
 
 // ----------------------------------------------------------------------------
 // Thesis Configuration, Keywords, Abstract, Acknowledgements & Acronyms
@@ -39,7 +39,7 @@
              [Another specific keyword]),
 	// set acronyms: none to disable them
 	acronyms: ((
-		"IAIK": "Institute of Applied Information Processing and Communications",
+		"ISEC": "Institute of Information Security",
 	)),
 	list_of_figures:  true,
 	list_of_tables:   true,
@@ -101,7 +101,7 @@
 //
 // - You'll find TODOs. Feel free to work on them and submit patches
 // - For bugs, report them on the template upstream:
-// - https://github.com/ecomaikgolf/typst-iaik-masterthesis-template
+// - https://github.com/ecomaikgolf/typst-isec-masterthesis-template
 //
 // -------------------------------[[ CUT HERE ]]--------------------------------
 

@@ -1,4 +1,4 @@
-#import "@local/iaik-master-thesis-template:1.0.0": *
+#import "@local/isec-master-thesis-template:1.0.0": *
 
 // ----------------------------------------------------------------------------
 // Thesis Configuration, Keywords, Abstract, Acknowledgements & Acronyms
@@ -101,7 +101,7 @@
 //
 // - You'll find TODOs. Feel free to work on them and submit patches
 // - For bugs, report them on the template upstream:
-// - https://github.com/ecomaikgolf/typst-iaik-masterthesis-template
+// - https://github.com/ecomaikgolf/typst-isec-masterthesis-template
 //
 // -------------------------------[[ CUT HERE ]]--------------------------------
 
@@ -176,7 +176,7 @@ We denote binary exclusive-or by $xor$.
 // TODO fix GLS and textcite citatiosn
 This is an example of how to specify and cite a book @AESbook, a journal
 article @bstjShannon49, a conference article @spKocherHFGGHHLM019, an informal
-report @iacrSchneierFKR15, and a website @webIAIK21. We can also add the
+report @iacrSchneierFKR15, and a website @webISEC25. We can also add the
 authors' names to the citation: #acr("AES") is a block cipher defined by
 #cite(<AESbook>, form: "prose").
 

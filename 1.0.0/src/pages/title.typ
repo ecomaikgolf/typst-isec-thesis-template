@@ -108,7 +108,7 @@
   #v(0.14cm)
 
   #text(size: 10pt)[
-    Institute of Applied Information Processing and Communications
+    Institute of Information Security
   ]
 
   #v(1.51cm)

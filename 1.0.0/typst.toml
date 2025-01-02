@@ -1,5 +1,5 @@
 [package]
-name = "iaik-master-thesis-template"
+name = "isec-master-thesis-template"
 version = "1.0.0"
 entrypoint = "src/lib.typ"
 

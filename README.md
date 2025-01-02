@@ -1,15 +1,15 @@
-# IAIK Master's Thesis Template
+# ISEC Master's Thesis Template
 
 Install with:
 
 ```sh
-git clone https://github.com/ecomaikgolf/typst-iaik-master-thesis-template ~/.local/share/typst/packages/local/iaik-master-thesis-template/
+git clone https://github.com/ecomaikgolf/typst-isec-master-thesis-template ~/.local/share/typst/packages/local/isec-master-thesis-template/
 ```
 
 Start new thesis with the template:
 
 ```sh
-typst init @local/iaik-master-thesis-template:1.0.0 thesis
+typst init @local/isec-master-thesis-template:1.0.0 thesis
 cd thesis
 ```
 
