@@ -24,8 +24,8 @@
 
 // partitle simulates \paragraph{title} (more or less)
 #let partitle(title: [Title], body) = context [
-	#block(above: 0.8cm)[
-		*#title* #h(0.3cm) #body
-	]
-	#fix_311
+  #block(above: 0.8cm)[
+    *#title* #h(0.3cm) #body
+  ]
+  #fix_311
 ]

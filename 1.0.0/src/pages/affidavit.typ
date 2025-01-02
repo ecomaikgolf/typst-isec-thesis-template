@@ -1,22 +1,22 @@
 #let affidavit_page() = [
-  #set page(
-    margin: (
-      bottom: 2.6cm,
-      left: 4.1cm,
-      right: 4.1cm,
-      top: 10.25cm,
-    ),
+	#set page(
+		margin: (
+		bottom: 2.6cm,
+		left: 4.1cm,
+		right: 4.1cm,
+		top: 10.25cm,
+	),
 		footer: none,
 		header: none,
-  )
+	)
 
-  #align(center)[
-    #text(size: 12pt)[
-      *AFFIDAVIT*
-    ]
-  ]
+	#align(center)[
+		#text(size: 12pt)[
+			*AFFIDAVIT*
+		]
+	]
 
-  #v(0.95cm)
+	#v(0.95cm)
 	#block[
 		#par[
 			I declare that I have authored this thesis independently, that I have not
@@ -27,17 +27,17 @@
 		]
 	]
 
-  #v(3.07cm)
+	#v(3.07cm)
 
-  #line(length: 100%, stroke: 0.5pt)
+	#line(length: 100%, stroke: 0.5pt)
 
-  #v(-0.1cm) // TODO: refactor
+	#v(-0.1cm) // TODO: refactor
 
-  #align(center)[
-    #text(size: 8pt)[
-      Date, Signature
-    ]
-  ]
+	#align(center)[
+		#text(size: 8pt)[
+			Date, Signature
+		]
+	]
 
 ]
 

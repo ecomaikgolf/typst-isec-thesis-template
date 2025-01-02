@@ -1,7 +1,7 @@
 #let acknowledgements_page(acknowledgements) = [
 
 	= Acknowledgements
-	
+
 	#acknowledgements
 
 ]

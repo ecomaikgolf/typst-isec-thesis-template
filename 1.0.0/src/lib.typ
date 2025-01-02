@@ -10,19 +10,19 @@
 #import "@preview/acrostiche:0.5.0": *
 
 #let thesis(
-  title: none,
-  author: none,
-  curriculum: none,
-  supervisors: none,
-  date: none,
-  acknowledgements: none,
-  abstract: none, 
-  keywords: none,
+	title: none,
+	author: none,
+	curriculum: none,
+	supervisors: none,
+	date: none,
+	acknowledgements: none,
+	abstract: none, 
+	keywords: none,
 	acronyms: none,
 	list_of_figures: none,
 	list_of_tables: none,
 	list_of_listings: none,
-  body
+	body
 ) = [
 
 	// Fill the global acronym dict with user acronyms
@@ -31,17 +31,17 @@
 	// --------------------------------------------------------------------------
 	// Text
 
-  #set text(font: "New Computer Modern", lang: "en")
+	#set text(font: "New Computer Modern", lang: "en")
 
 	// --------------------------------------------------------------------------
 	// PDF Metadata
 
-  // Set document metadata
-  #set document(
-    title: title,
-    author: author.at(0).text,
-    keywords: content_to_string(keywords.join(", "))
-  )
+	// Set document metadata
+	#set document(
+		title: title,
+		author: author.at(0).text,
+		keywords: content_to_string(keywords.join(", "))
+	)
 
 	// --------------------------------------------------------------------------
 	// [CONTENT] Title Page
@@ -57,7 +57,7 @@
 
 	// --------------------------------------------------------------------------
 	// Paragraph
-  #set par(
+	#set par(
 		justify: true,
 		leading: 0.54em,
 		spacing: 0.6em,
@@ -68,19 +68,19 @@
 	// --------------------------------------------------------------------------
 	// Page Header & Footer
 	// - Show "Chapter 1: Title" and page number in footer
-	
+
 	// Number in page footer
 	#let page_footer = context [
-      #align(center)[
-			 #counter(page).display("1")
-      ]
+		#align(center)[
+			#counter(page).display("1")
+		]
 	]
 
 	// Number in page footer (roman numerals)
 	#let page_footer_roman = context [
-      #align(center)[
-        #counter(page).display("i")
-      ]
+		#align(center)[
+			#counter(page).display("i")
+		]
 	]
 	#let page_footer_descent = 1.05cm
 
@@ -93,60 +93,63 @@
 		#let whtlt = ([Bibliography], [Contents], [List of Figures], 
 									[List of Tables], [List of Listings],)
 
-      // Get the real document page (not page counter)
-      #let pageNumber = here().page()
-      // Get all the level 1 headings in the document
-      #let headings = query(heading.where(level: 1))
-      // Match if this page has a level 1 heading
-      #let isSectionPage = headings.any(it => it.location().page() == pageNumber)
-		  // Get its section name
-      #let sectionName  = query(selector(heading.where(level: 1))
-				.before(here()))
+		// Get the real document page (not page counter)
+		#let pageNumber = here().page()
+		// Get all the level 1 headings in the document
+		#let headings = query(heading.where(level: 1))
+		// Match if this page has a level 1 heading
+		#let isSectionPage = headings.any(it => it.location().page() == pageNumber)
+		// Get its section name
+		#let sectionName  = query(selector(heading.where(level: 1))
+			.before(here()))
 
-      // If it doesn't have a level 1 heading, print text
-      #if not isSectionPage [
-        #align(center)[
-					#if sectionName == none or sectionName == () [
-					] else if not whtlt.contains(sectionName.last().body) [
-							_Chapter #counter(heading.where(level: 1)).display("1") 
-							#sectionName.last().body _ 
-					] else [
-						_ #sectionName.last().body _ 
-					]
-        ]
-      ]
+		// If it doesn't have a level 1 heading, print text
+		#if not isSectionPage [
+			#align(center)[
+				#if sectionName == none or sectionName == () [
+				] else if not whtlt.contains(sectionName.last().body) [
+					_Chapter #counter(heading.where(level: 1)).display("1") 
+					#sectionName.last().body _ 
+				] else [
+					_ #sectionName.last().body _ 
+				]
+			]
+		]
 	]
 	#let page_header_ascent = 0.85cm
 
 	// --------------------------------------------------------------------------
 	// Page
-  #set page(
+	#set page(
 		numbering: "1",
-    margin: (
-      bottom: 5cm,
-      left: 3.15cm,
-      right: 3.15cm,
-      top: 3.7cm,
-    ),
-    footer-descent: page_footer_descent,
-    footer: context [ #page_footer ],
-    header-ascent: page_header_ascent,
-    header: context [ #page_header ],
-  )
+		margin: (
+		bottom: 5cm,
+		left: 3.15cm,
+		right: 3.15cm,
+		top: 3.7cm,
+	),
+		footer-descent: page_footer_descent,
+		footer: context [ #page_footer ],
+		header-ascent: page_header_ascent,
+		header: context [ #page_header ],
+	)
 
 	// --------------------------------------------------------------------------
 	// Sections
 
-  // Level 1 heading (Chapter)
+	// Level 1 heading (Chapter)
 	#show heading.where(level: 1): set heading(supplement: "Chapter") // for @ref
 	#show heading.where(level: 1): set text(size: 20pt)
 	#show heading.where(level: 1): set heading(numbering: "1.")
 	#show heading.where(level: 1): set par(first-line-indent: 0pt)
-  #show heading.where(level: 1): it => [
-		#let whtl = ([Bibliography], [Abstract], [Contents], [List of Figures], [List of Tables], [List of Listings], [Acknowledgements], [Acronyms], [Notation], )
+	#show heading.where(level: 1): it => [
+		// TODO: come with a better solution...
+		#let whtl = ([Bibliography], [Abstract], [Contents], [List of Figures],
+								 [List of Tables], [List of Listings], [Acknowledgements], 
+								 [Acronyms], [Notation], )
 
 		// Forced page break (new chapter)
-    #pagebreak()
+		#pagebreak()
 
 		#block(sticky: true)[
 			#v(weak: false, 1.75cm)
@@ -156,15 +159,15 @@
 			// from there, we change the display to Appendix
 			#if not whtl.contains(it.body) [
 				#it.supplement #counter(heading).display(it.numbering)
-				#v(0.38cm)
-			]
+					#v(0.38cm)
+				]
 
-			#it.body
-			#v(0.65cm)
+				#it.body
+				#v(0.65cm)
 		]
-  ]
+	]
 
-  // Level 2 heading 
+	// Level 2 heading 
 	#show heading.where(level: 2): set block(above: 0.86cm, below: 0.6cm,
 		sticky: true)
 	#show heading.where(level: 2): set text(size: 14pt)
@@ -194,24 +197,24 @@
 		// Page footer is in roman numbers
 		#set page(footer: page_footer_roman)
 
-  	// Show affidavit (authoring) page on the second page
-  	#affidavit_page()
+		// Show affidavit (authoring) page on the second page
+		#affidavit_page()
 
-  	// Show acknowledgements page (starts on page 3)
-  	#acknowledgements_page(acknowledgements)
-  	
-  	// Show abstract page
-  	#abstract_page(abstract, keywords)
+		// Show acknowledgements page (starts on page 3)
+		#acknowledgements_page(acknowledgements)
 
-  	// Table of Contents
-  	#toc_page(
+		// Show abstract page
+		#abstract_page(abstract, keywords)
+
+		// Table of Contents
+		#toc_page(
 			list_of_figures: list_of_figures,
 			list_of_tables: list_of_tables,
 			list_of_listings: list_of_listings,
 		)
 	]
 
-// --------------------------------------------------------------------------
+	// --------------------------------------------------------------------------
 
 	#set text(size: 11pt)
 	#set page(footer: context [ #page_footer ] )
@@ -223,15 +226,15 @@
 
 	// Reset the counter H per heading: Figure H.N: caption
 	#show heading.where(level: 1): it => {
-    counter(figure.where(kind: image)).update(0)
-    counter(figure.where(kind: table)).update(0)
-    counter(figure.where(kind: raw)).update(0)
-    it
-  }
+		counter(figure.where(kind: image)).update(0)
+		counter(figure.where(kind: table)).update(0)
+		counter(figure.where(kind: raw)).update(0)
+		it
+	}
 	// Change the nubering to H.N (section.counter)
 	#set figure(numbering: num =>
-    numbering("1.1", counter(heading).get().first(), num)
-  )
+		numbering("1.1", counter(heading).get().first(), num)
+	)
 	// Spacing from next/prev content
 	#show figure: set block(above: 0.3cm, below: 0.3cm)
 	// Caption style
@@ -281,14 +284,14 @@
 
 	// Reset equation counter per section
 	#show heading.where(level: 1): it => {
-    counter(math.equation).update(0)
-    it
-  }
+		counter(math.equation).update(0)
+		it
+	}
 	// Set equation counter style
 	//#set math.equation(numbering: "(1)")
 	#set math.equation(numbering: num =>
-    (numbering("1.1", counter(heading).get().first(), num))
-  )
+		(numbering("1.1", counter(heading).get().first(), num))
+	)
 
 	// Style to display the equation block:
 	//             |equation|         (S.N)
@@ -296,7 +299,7 @@
 		if eq.block and eq.numbering != none {
 			let eqCounter = counter(math.equation).at(eq.location())
 			let eqNumbering = numbering(eq.numbering, ..eqCounter)
-		
+
 			grid(
 				// TODO: change this 0pt as its fake. The (1.1) numbering takes more
 				// space. The issue is that with `auto` the centering of the equation
@@ -313,8 +316,8 @@
 	// --------------------------------------------------------------------------
 	// Bibliography & Citations
 
-  #set bibliography(title: "Bibliography")
-  #set cite(style: "alphanumeric")
+	#set bibliography(title: "Bibliography")
+	#set cite(style: "alphanumeric")
 	#show bibliography: set par(spacing: 0.4cm)
 
 	// --------------------------------------------------------------------------
@@ -328,9 +331,9 @@
 	//#set list(marker: text(15pt, [•], baseline: -5pt))
 	//#show list.where(level: 1): set list(marker: text(15pt, [#sym.bullet]))
 	#set list(marker: (
-			move(dy: -0.08cm, text(size: 15pt)[#sym.bullet]),
-			box[#move(dy: 0.04cm, text(size: 7pt)[#sym.bar.h #h(0.12cm)])],
-			box[#move(dy: -0.04cm, text(size: 11pt)[#sym.convolve #h(0.12cm)])],
+		move(dy: -0.08cm, text(size: 15pt)[#sym.bullet]),
+		box[#move(dy: 0.04cm, text(size: 7pt)[#sym.bar.h #h(0.12cm)])],
+		box[#move(dy: -0.04cm, text(size: 11pt)[#sym.convolve #h(0.12cm)])],
 	))
 	//#set list(marker: (level) => {
 	//	// move is a hotfix for #1204. Won't work with different sizes/objects, so
@@ -348,11 +351,11 @@
 	// - User Acronyms
 
 	// Reset counters to start user part of the document
-  #counter(heading).update(0)
-  #counter(heading.where(level: 1)).update(0)
-  #counter(page).update(1)
+	#counter(heading).update(0)
+	#counter(heading.where(level: 1)).update(0)
+	#counter(page).update(1)
 
-  #body
+	#body
 ]
 
 //vim:tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab colorcolumn=81

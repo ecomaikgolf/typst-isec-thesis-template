@@ -32,7 +32,7 @@
 		#link(loc,
 			strong[
 				#grid(columns: (if whtl.contains(name) {-0.3cm} else {0.3cm},
-											  0.28cm, 1fr, auto), gutter: 0pt, rows: 1,
+					0.28cm, 1fr, auto), gutter: 0pt, rows: 1,
 					box[
 						#if not whtl.contains(name) [ #sec ]
 					],
@@ -63,7 +63,7 @@
 		//     1.1. Subsection Name  . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
 			grid(columns: (0.65cm, auto, 0.3cm, auto, 0.3cm, 1fr, 0.45cm, auto),
-					 gutter: 0pt, rows: 1,
+				gutter: 0pt, rows: 1,
 				box[
 					// Spacing
 				],
@@ -104,7 +104,7 @@
 
 		#link(loc,
 			grid(columns: (1.6cm, auto, 0.3cm, auto, 0.3cm, 1fr, 0.45cm, auto),
-					 gutter: 0pt, rows: 1,
+				gutter: 0pt, rows: 1,
 				box[
 					// Spacing
 				],
@@ -171,13 +171,13 @@
 
 		// If its not the first entry, add previous padding
 		#if sec != [1.] [
-			#v(0.38cm)
-		]
+		#v(0.38cm)
+	]
 
 		// 1.1. Figure Caption . . . . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
 			grid(columns: (0.6cm, auto, 0.2cm, auto, 0.15cm, 1fr, 0.2cm, auto),
-					gutter: 0pt, rows: 1,
+				gutter: 0pt, rows: 1,
 				box[
 					// Spacing
 				],
