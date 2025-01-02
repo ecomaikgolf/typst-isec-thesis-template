@@ -52,14 +52,13 @@
 //
 // Nice that you've chosen Typst as your typesetting system, you'll enjoy:
 //
-// - milisecond incremental builds
-// - subsecond full builds
-// - multithreaded builds
-// - sane compiler error outputs without intermediate files
-// - automatic multiple compiler passes (no more mklatex/makefile)
-// - simpler scripting & syntax
-// - similar power as in LaTeX, infinite extensibility
-// - modern & new typesetting system
+// - Milisecond incremental builds
+// - Subsecond full builds
+// - Multithreaded builds per pagebreak
+// - Easy rustc-like comiler error messages (and no intermediates!)
+// - Transparent multiple compiler passes (no more mklatex/makefiles)
+// - Simple & powerful scripting and syntax
+// - WebAssembly plugin support (python/js interpreters in your thesis? Yes)
 //
 // Typst quickstart:
 //
@@ -140,7 +139,7 @@
 
 = Discussion <sec:discussion>
 
-What a nice template @typst_ernesto_iaik_template
+What a nice template @typst_ernesto_isec_template
 
 
 // ----------------------------------------------------------------------------
@@ -170,7 +169,7 @@ What a nice template @typst_ernesto_iaik_template
 // Appendix (Optional)
 // ----------------------------------------------------------------------------
 
-// IGNORE
+// IGNORE (TODO find a way of hiding this to the user)
 #show heading.where(level: 1): set heading(supplement: "Appendix")
 #show heading.where(level: 1): set heading(numbering: "A.")
 #show heading.where(level: 2): set heading(numbering: "A.1.")
@@ -184,7 +183,7 @@ What a nice template @typst_ernesto_iaik_template
 #counter(heading).update(0)
 // END IGNORE
 
-// Just add a regular section here and it will eb an Appendix!
+// Just add a regular section here and it will be an Appendix!
 //
 // = Example
 // This is an appendix
