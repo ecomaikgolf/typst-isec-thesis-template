@@ -280,20 +280,18 @@
 
 	// Equations
 
-	#show math.equation: set block(breakable: true)
-
 	// Reset equation counter per section
 	#show heading.where(level: 1): it => {
 		counter(math.equation).update(0)
 		it
 	}
+
 	// Set equation counter style
-	//#set math.equation(numbering: "(1)")
 	#set math.equation(numbering: num =>
 		(numbering("1.1", counter(heading).get().first(), num))
 	)
 
-	// Style to display the equation block:
+	// Style to display the equation block (just to add parenthesis):
 	//             |equation|         (S.N)
 	#show math.equation: eq => {
 		if eq.block and eq.numbering != none {
