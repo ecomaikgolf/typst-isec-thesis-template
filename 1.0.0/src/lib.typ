@@ -260,20 +260,37 @@
 
 	// Listings
 
+	#show raw: set text(size: 8pt)
+
 	// Do you want tree-sitter powered syntax highlighting in code blocks?
 	// Get https://github.com/RubixDev/syntastica-typst :)
 
 	// Set default tab-size (2 for documents)
 	#set raw(tab-size: 2)
 	// Code blocks taking full width and with a black border
-	#show raw.where(block:true): set block(stroke: black + 0.5pt,
-		inset: 0.2cm, width: 100%)
+	#show raw.where(block: true): set block(stroke: black + 0.5pt,
+		inset: 0.25cm, width: 100%)
 	// Show line numbers in gray
 	#show raw.where(block: true): code => {
 		show raw.line: line => {
-			text(fill: gray)[#line.number]
-			h(1em)
-			line.body
+
+			// Create a box with the size of `size`
+			let boxsize(size) = [
+				#box(width: size)[
+					#align(right + horizon)[
+						#text(fill: gray)[#line.number]
+					]
+				]
+				#line.body
+			]
+
+			// Decide the size of the box depending on the numbers of lines of code
+			context {
+				let loc = code.lines.first().count
+				let l1 = measure(text(fill: gray)[0]).width // Get size of a digit
+				boxsize(l1 * calc.ceil(loc / 10)) // Pad 0 (1 digit) 00 (2 digits) ...
+			}
+
 		}
 		code
 	}
