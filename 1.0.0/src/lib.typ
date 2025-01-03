@@ -82,7 +82,7 @@
 			#counter(page).display("i")
 		]
 	]
-	#let page_footer_descent = 1.05cm
+	#let page_footer_descent = 1.4cm
 
 	// Chapter in header if not first page of it
 	// TODO: probably its much better if it can be reworked into a lambda instead
@@ -123,7 +123,7 @@
 	#set page(
 		numbering: "1",
 		margin: (
-		bottom: 5cm,
+		bottom: 5.33cm,
 		left: 3.15cm,
 		right: 3.15cm,
 		top: 3.7cm,
