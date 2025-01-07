@@ -41,10 +41,6 @@
 		#let name = it.body.children.slice(0).at(2)
 		#let page = it.page
 
-		//#let a = query(selector(outline.entry).before(loc)).last().location().page() 
-		//#let b = loc.page()
-		//#let prev = a == b
-
 		// 1. Section Name                                                        12
 		#link(loc,
 			strong[
