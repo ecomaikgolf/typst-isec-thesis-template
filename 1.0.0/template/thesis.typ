@@ -37,7 +37,6 @@
   ],
   keywords: ([Broad keyword], [Keyword], [Specific Keyword],
              [Another specific keyword]),
-	// set acronyms: none to disable them
 	acronyms: ((
 		"ISEC": "Institute of Information Security",
 	)),
@@ -153,9 +152,10 @@ What a nice template @typst_ernesto_isec_template
 // Acronyms
 // ----------------------------------------------------------------------------
 
-// TODO: No support for showing page of first acronym
-// - Set acronyms: none in thesis.with to disable acronyms
+// - Set acronyms: none in thesis.with to disable
 // - See https://typst.app/universe/package/acrostiche/ for documentations
+// - TLDR: #acr("AES")
+// - Currently using downstream package version with extra functionalities
 
 #acronyms_page(acros)
 

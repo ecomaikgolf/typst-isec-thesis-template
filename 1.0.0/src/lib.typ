@@ -6,8 +6,9 @@
 #import "pages/acronyms.typ": *
 #import "helper.typ": *
 
-// TODO: Homecook a custom solution to avoid depending on any package
-#import "@preview/acrostiche:0.5.0": *
+// Downstream package with extra functionalities
+// #import "@preview/acrostiche:0.5.0": *
+#import "packages/acrostiche.typ": * // 0.5.0 + patches (untouched API)
 
 #let thesis(
 	title: none,
@@ -24,6 +25,9 @@
 	list_of_listings: none,
 	body
 ) = [
+
+	// --------------------------------------------------------------------------
+	// Acronyms
 
 	// Fill the global acronym dict with user acronyms
 	#if acronyms != none [ #init-acronyms(acronyms) ]
