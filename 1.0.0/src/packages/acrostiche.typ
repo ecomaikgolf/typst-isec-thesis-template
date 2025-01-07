@@ -12,7 +12,7 @@
     // Add metadata to each entry.
     // first boolean is "is it already defined?", used to know if expansion is needed.
     // second boolean is "was it used before in the document?", used for the used-only filtering in the index.
-    let data = (defs, false, false, state("locations"))
+    let data = (defs, false, false, state("locations-" + acr))
     states.insert(acr,data)
   }
   acros.update(states)

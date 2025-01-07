@@ -37,6 +37,9 @@
   ],
   keywords: ([Broad keyword], [Keyword], [Specific Keyword],
              [Another specific keyword]),
+	notations: ((
+		"xor": ([#sym.xor.big], "exclusive-or (Xor)"),
+	)),
 	acronyms: ((
 		"ISEC": "Institute of Information Security",
 	)),
@@ -145,16 +148,19 @@ What a nice template @typst_ernesto_isec_template
 // Notation
 // ----------------------------------------------------------------------------
 
-// TODO: No support for Notations (yet™)
-// I personally don't use them so I didn't implement them
+// - Set notations: none in thesis.with to disable this page
+// - TLDR: #ntt("xor") from thesis.with notations
+// - Modified "acrostiche" for notations
+
+#notations_page(notat)
 
 // ----------------------------------------------------------------------------
 // Acronyms
 // ----------------------------------------------------------------------------
 
-// - Set acronyms: none in thesis.with to disable
+// - Set acronyms: none in thesis.with to disable this page
 // - See https://typst.app/universe/package/acrostiche/ for documentations
-// - TLDR: #acr("AES")
+// - TLDR: #acr("AES") from the thesis.with acronyms
 // - Currently using downstream package version with extra functionalities
 
 #acronyms_page(acros)
@@ -162,6 +168,11 @@ What a nice template @typst_ernesto_isec_template
 // ----------------------------------------------------------------------------
 // Bibliography
 // ----------------------------------------------------------------------------
+
+// - Use bibtex (LaTeX) or hayagriva YAML (Typst) bibliography files
+// - See https://typst.app/docs/reference/model/cite/
+// - See https://typst.app/docs/reference/model/bibliography/
+// - TLDR: @biblabel OR #cite(form: ..., biblabel)
 
 #bibliography("bibliography.bib")<sec:bibliography>
 

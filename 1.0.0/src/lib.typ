@@ -4,11 +4,13 @@
 #import "pages/table-of-contents.typ": *
 #import "pages/acknowledgements.typ": *
 #import "pages/acronyms.typ": *
+#import "pages/notations.typ": *
 #import "helper.typ": *
 
 // Downstream package with extra functionalities
 // #import "@preview/acrostiche:0.5.0": *
 #import "packages/acrostiche.typ": * // 0.5.0 + patches (untouched API)
+#import "packages/notations.typ": * // 0.5.0 + patches (untouched API)
 
 #let thesis(
 	title: none,
@@ -19,6 +21,7 @@
 	acknowledgements: none,
 	abstract: none, 
 	keywords: none,
+	notations: none,
 	acronyms: none,
 	list_of_figures: none,
 	list_of_tables: none,
@@ -31,6 +34,8 @@
 
 	// Fill the global acronym dict with user acronyms
 	#if acronyms != none [ #init-acronyms(acronyms) ]
+
+	#if notations != none [ #init-notations(notations) ]
 
 	// --------------------------------------------------------------------------
 	// Text
