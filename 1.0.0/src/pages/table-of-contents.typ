@@ -116,7 +116,7 @@
 		#let page = it.page
 
 		#link(loc,
-			grid(columns: (1.6cm, auto, 0.3cm, auto, 0.3cm, 1fr, 0.45cm, auto),
+			grid(columns: (1.6cm, auto, 0.3cm, auto, 0.1cm, 1fr, 0.45cm, auto),
 				gutter: 0pt, rows: 1,
 				box[
 					// Spacing
@@ -155,37 +155,12 @@
 	// -----------------------------------------------------------------------------
 	// Figures
 
-	// Style of Level 1 Sections
-	#show outline.entry.where(level: 1): it => [
-		#let loc  = it.element.location()
-		#let sec  = it.body.children.slice(0).at(2)
-		#let cap  = it.body.children.slice(0).at(4)
-		#let page = it.page
-
-		#link(loc,
-			box[
-				#h(0.6cm)
-				#sec.
-				#h(0.15cm)
-				#cap
-				#ruler
-				#h(0.3cm)
-				#page
-			]
-		)
-	]
-
 	// Style of Level 1 Figures
 	#show outline.entry.where(level: 1): it => [
 		#let loc  = it.element.location()
 		#let sec  = it.body.children.slice(0).at(2)
 		#let cap  = it.body.children.slice(0).at(4)
 		#let page = it.page
-
-		// If its not the first entry, add previous padding
-		#if sec != [1.] [
-		#v(0.38cm)
-	]
 
 		// 1.1. Figure Caption . . . . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
