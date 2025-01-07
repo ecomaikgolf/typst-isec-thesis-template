@@ -1,6 +1,23 @@
 // Sections that shouldn't show the section number
 #let whtl  = ([Bibliography], [Acronyms], [Notation],)
-#let ruler = box(width: 1fr, repeat(h(3pt) + "." + h(3pt)))
+#let ruler = context box(width: 1fr)[
+
+	#let spacing = 8
+
+	#let x  = here().position().x.pt()
+	#let d  = calc.trunc((x / spacing) + 1) * spacing
+	#let p  = (d - x) * 1pt
+
+	#grid(gutter: 0pt, columns: (p, auto),
+		box[
+		],
+		repeat[
+			#box(width: spacing * 1pt)[
+				#box(width: (spacing/2) * 1pt)[.] #h((spacing/2) * 1pt)
+			]
+		],
+	)
+]
 
 #let toc_page(
 	list_of_figures:  true,
@@ -62,7 +79,7 @@
 
 		//     1.1. Subsection Name  . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
-			grid(columns: (0.65cm, auto, 0.3cm, auto, 0.3cm, 1fr, 0.45cm, auto),
+			grid(columns: (0.65cm, auto, 0.3cm, auto, 0.1cm, 1fr, 0.45cm, auto),
 				gutter: 0pt, rows: 1,
 				box[
 					// Spacing
@@ -77,7 +94,7 @@
 					#name
 				],
 				box[
-					// Spacing
+
 				],
 				box[
 					#ruler
