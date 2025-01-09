@@ -49,8 +49,17 @@ xdg-open thesis.typ
 Now edit `thesis.typ` and it will be incrementally built in each save.
 
 Incremental builds are blazingly fast, but regular PDF rendering (on the
-viewer) is a bottleneck here. Use tinymist `:TypstPreview` which uses the
-browser to do partial renderings and previews will be even more responsive.
+viewer) is a bottleneck here. 
+
+Use tinymist with neovim's `:TypstPreview`, VSCode plugin or its CLI:
+
+```
+tinymist preview --partial-rendering --host localhost:8080 thesis.typ
+```
+
+which uses the browser to do PDF partial renderings and previews will be even
+more responsive. No need for running `typst watch` now. It even has features
+like cursor sync, click to jump, etc.
 
 ## Design
 

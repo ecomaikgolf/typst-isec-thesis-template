@@ -1,7 +1,7 @@
 #import "@local/isec-master-thesis-template:1.0.0": *
 
 // ----------------------------------------------------------------------------
-// Thesis Configuration, Keywords, Abstract, Acknowledgements & Acronyms
+// Configuration
 // ----------------------------------------------------------------------------
 #show: thesis.with(
   title: [
@@ -32,8 +32,6 @@
     approach/attack/countermeasure/implementation. Finally, summarize any key
     conclusions and calls to action that you have, e.g., apply the idea more
     broadly, get rid of some technology, find a countermeasure, or similar.
-
-		English abstract of your thesis (at most one page)
   ],
   keywords: ([Broad keyword], [Keyword], [Specific Keyword],
              [Another specific keyword]),
@@ -44,8 +42,8 @@
 		"ISEC": "Institute of Information Security",
 	)),
 	list_of_figures:  true,
-	list_of_tables:   true,
-	list_of_listings: true,
+	list_of_tables:   true, 
+	list_of_listings: true, // Wrap code in #figure
 )
 
 // -------------------------------[[ CUT HERE ]]--------------------------------
@@ -64,8 +62,10 @@
 //
 // Typst quickstart:
 //
-// - $ typst watch thesis.typ  (Incremental build, recommended)
-// - $ typst build thesis.typ  (Plain build)
+// - $ typst watch thesis.typ    (Incremental build, recommended)
+// - $ typst compile thesis.typ  (Plain build, not recommended for editing)
+// - $ tinymist preview --partial-rendering --host localhost:8080 thesis.typ
+//     (Faster preview, recommended for live previews) [See Typst LSP]
 //
 // Typst documentation, guides & help:
 //
@@ -74,17 +74,10 @@
 // - https://discord.gg/2uDybryKPe
 // - https://forum.typst.app/
 //
-// Typst LSP: https://github.com/Myriad-Dreamin/tinymist
+// Typst LSP: 
 //
-// - Much faster preview with :TypstPreview
+// - https://github.com/Myriad-Dreamin/tinymist
 // - https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist
-//
-// Better code syntax highlighting (Treesitter):
-//
-// - Typst supports WebAssembly plugins
-// - There's a plugin to use treesitter as code highlighter backend (slower)
-// - https://github.com/RubixDev/syntastica-typst
-// - Optional. Use if you have a nice usecase. Toggle it in final PDF build
 //
 // Typst plugins:
 //
@@ -94,15 +87,20 @@
 // Recommendations:
 //
 // - Keep code/text formatted at 80 cols as in this example
-// - Use tinymist :TypstPreview (or vscode extension) for previewing changes
-// - Check that you're using latest Typst & latest template version
+// - Use tinymist for previewing changes (faster than typst watch)
 // - Force #pagebreak() if your document is long. This triggers multithr. builds 
+// - Keep in mind Typst updates breaks API for now (still 0.X.X)
 //
 // Bugs, limitations, differences:
 //
-// - You'll find TODOs. Feel free to work on them and submit patches
-// - For bugs, report them on the template upstream:
-// - https://github.com/ecomaikgolf/typst-isec-masterthesis-template
+// - Upstream: https://github.com/ecomaikgolf/typst-isec-masterthesis-template
+// - Check "Issues" in the upstream, report bugs there
+// - Feel free to send patches
+//
+// Now that you know everything important, I recommend removing this comment
+//
+// Good luck and happy writing,
+// Ernesto - ecomaikgolf.com
 //
 // -------------------------------[[ CUT HERE ]]--------------------------------
 
@@ -141,16 +139,14 @@
 
 = Discussion <sec:discussion>
 
-What a nice template @typst_ernesto_isec_template
-
 
 // ----------------------------------------------------------------------------
 // Notation
 // ----------------------------------------------------------------------------
 
-// - Set notations: none in thesis.with to disable this page
+// - Set notations: none in thesis.with to disable this page (or remove this)
 // - TLDR: #ntt("xor") from thesis.with notations
-// - Modified "acrostiche" for notations
+// - Downstream "acrostiche" package with patches for notations + page numbers
 
 #notations_page(notat)
 
@@ -158,10 +154,10 @@ What a nice template @typst_ernesto_isec_template
 // Acronyms
 // ----------------------------------------------------------------------------
 
-// - Set acronyms: none in thesis.with to disable this page
-// - See https://typst.app/universe/package/acrostiche/ for documentations
+// - Set acronyms: none in thesis.with to disable this page (or remove this)
 // - TLDR: #acr("AES") from the thesis.with acronyms
-// - Currently using downstream package version with extra functionalities
+// - Downstream "acrostiche" package with patches for listing page numbers
+// - See https://typst.app/universe/package/acrostiche/ for documentation
 
 #acronyms_page(acros)
 
