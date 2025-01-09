@@ -261,6 +261,23 @@
 			],
 		)
 	]
+	// Special case for listings (less marging
+	// TODO: these negative spaces are a bit spaghetti I recognize
+	#show figure.caption.where(kind: raw): it => context [
+		#v(-0.34cm)
+		#grid(
+			columns: 2,
+			gutter: 0cm,
+			align: left,
+			box[
+				#it.supplement~#it.counter.display()#it.separator
+			],
+			box[
+				#align(left)[#it.body]
+			],
+		)
+		#v(-0.2cm)
+	]
 	// Fix #311 issue (paragraph indent)
 	#show figure: it => context [
 		#it
@@ -277,8 +294,8 @@
 	// Set default tab-size (2 for documents)
 	#set raw(tab-size: 2)
 	// Code blocks taking full width and with a black border
-	#show raw.where(block: true): set block(stroke: black + 0.5pt,
-		inset: 0.25cm, width: 100%)
+	//#show raw.where(block: true): set block(stroke: black + 0.5pt,
+	//	inset: 0.25cm, width: 100%)
 	// Show line numbers in gray
 	#show raw.where(block: true): code => {
 		show raw.line: line => {
@@ -299,9 +316,18 @@
 				let l1 = measure(text(fill: gray)[0]).width // Get size of a digit
 				boxsize(l1 * calc.ceil(loc / 10)) // Pad 0 (1 digit) 00 (2 digits) ...
 			}
-
 		}
-		code
+
+		v(0.2cm)
+		grid(gutter: 0pt, align: left, inset: 0pt, columns: (3%, 1fr, 3%),
+			box[],
+			block(stroke: 0.5pt + black, inset: 0.25cm, width: 100%)[
+				#code
+			],
+			box[],
+		)
+		fix_311
+		v(0.2cm)
 	}
 
 	// Equations
