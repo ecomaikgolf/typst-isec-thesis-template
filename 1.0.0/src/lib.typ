@@ -245,14 +245,14 @@
 		numbering("1.1", counter(heading).get().first(), num)
 	)
 	// Spacing from next/prev content
-	#show figure: set block(above: 0.3cm, below: 0.3cm)
+	#show figure: set block(above: 0.48cm, below: 0.48cm)
 	// Caption style
 	#show figure.caption: it => context [
+		#v(0.3cm)
 		#grid(
 			columns: 2,
 			gutter: 0cm,
-			column-gutter: 0cm,
-			row-gutter: 0cm,
+			align: left,
 			box[
 				#it.supplement~#it.counter.display()#it.separator
 			],
