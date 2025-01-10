@@ -9,7 +9,7 @@ repository = "https://github.com/ecomaikgolf/typst-isec-master-thesis-template/"
 categories = ["thesis"]
 disciplines = ["computer-science", "engineering"]
 keywords = ["ISEC", "Institute of Information Security", "IAIK", "TUGraz", "Graz University of Technology", "thesis", "template", "Master Thesis"]
-exclude = ["/demo/*"]
+exclude = ["demo/*"]
 compiler = "0.12.0"
 
 [template]
