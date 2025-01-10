@@ -6,7 +6,7 @@ Template.
 The template **has not been officially checked for compliance**, but based on
 the PDF results, the differences are very subtle.
 
-Author: Ernesto Martínez García (ecomaikgolf.com)
+Author: Ernesto Martínez García <[ecomaikgolf.com](https://ecomaikgolf.com)>
 
 ## Design
 
