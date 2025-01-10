@@ -81,6 +81,15 @@
 // - https://typst.app/universe/
 // - https://github.com/qjcg/awesome-typst
 //
+// Grammar checker (LanguageTool backend):
+//
+// - Install maven (dependency of typst-languagetool)
+// - Install typst-languagetool:
+//     cargo install --git=https://github.com/antonWetzel/typst-languagetool \
+//				cli --features=bundle
+// - Run checker on each save:
+//		 typst-languagetool --bundle watch --path=thesis.typ
+//
 // Recommendations:
 //
 // - Keep code/text formatted at 80 cols as in this example
