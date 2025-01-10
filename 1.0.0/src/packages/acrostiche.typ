@@ -12,7 +12,7 @@
     // Add metadata to each entry.
     // first boolean is "is it already defined?", used to know if expansion is needed.
     // second boolean is "was it used before in the document?", used for the used-only filtering in the index.
-    let data = (defs, false, false, state("locations-" + acr))
+    let data = (defs, false, false)
     states.insert(acr,data)
   }
   acros.update(states)
@@ -105,12 +105,6 @@
 #let mark-acr-used(acr) = {
   // Mark an acronym as used.
 
-  context {
-    let acronyms = acros.get()
-    let locs = acronyms.at(acr).at(3)
-    locs.update(locs.get() + (str(counter(page).display("1")),))
-  }
-  
   // Generate the key associated with this acronym
   let state-key = "acronym-state-" + acr
   acros.update(data => {
@@ -135,9 +129,9 @@
     if acr in data{
       let short = display-short(acr, plural: plural)
       if data.at(acr).at(1){
-        short
+        [#short#label(state-key)]
       }else{
-        [#display-def(acr, plural: plural)~(#short)]
+        [#display-def(acr, plural: plural)~(#short)#label(state-key)]
       }
     }else{
       panic("You requested the acronym "+acr+" that you did not define first.")

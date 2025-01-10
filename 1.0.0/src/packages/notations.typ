@@ -12,7 +12,7 @@
     // Add metadata to each entry.
     // first boolean is "is it already defined?", used to know if expansion is needed.
     // second boolean is "was it used before in the document?", used for the used-only filtering in the index.
-    let data = (defs, false, false, state("locations-ntt-" + acr))
+    let data = (defs, false, false)
     states.insert(acr,data)
   }
   notat.update(states)
@@ -105,12 +105,6 @@
 #let mark-att-used(acr) = {
   // Mark an notation as used.
 
-  context {
-    let notations = notat.get()
-    let locs = notations.at(acr).at(3)
-    locs.update(locs.get() + (str(counter(page).display("1")),))
-  }
-  
   // Generate the key associated with this notation
   let state-key = "notation-state-" + acr
   notat.update(data => {
@@ -133,7 +127,7 @@
   context{
     let data = notat.get()
     if acr in data{
-      text(size: 11pt)[#data.at(acr).at(0).at(0)]
+      text(size: 11pt)[#data.at(acr).at(0).at(0)#label(state-key)]
     }else{
       panic("You requested the notation "+acr+" that you did not define first.")
     }
