@@ -75,7 +75,7 @@
 
 		//     1.1. Subsection Name  . . . . . . . . . . . . . . . . . . . . . . 12
 		#link(loc,
-			grid(columns: (0.65cm, auto, 0.3cm, auto, 0.1cm, 1fr, 0.45cm, auto),
+			grid(columns: (0.65cm, auto, 0.3cm, auto, 0.1cm, 1fr, 0.35cm, auto),
 				gutter: 0pt, rows: 1,
 				box[
 					// Spacing
