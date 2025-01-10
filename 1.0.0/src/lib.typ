@@ -264,7 +264,7 @@
 	// Special case for listings (less marging
 	// TODO: these negative spaces are a bit spaghetti I recognize
 	#show figure.caption.where(kind: raw): it => context [
-		#v(-0.34cm)
+		#v(-0.28cm)
 		#grid(
 			columns: 2,
 			gutter: 0cm,
@@ -378,7 +378,7 @@
 	#show bibliography: set par(spacing: 0.4cm)
 
 	// --------------------------------------------------------------------------
-	// Lists, enumerations, etc
+	// Lists, Enumeration, etc
 
 	// General listing config
 	#set list(spacing: 1.15em, indent: 0.48cm, body-indent: 0.2em)
@@ -392,6 +392,11 @@
 		box[#move(dy: 0.04cm, text(size: 7pt)[#sym.bar.h #h(0.12cm)])],
 		box[#move(dy: -0.04cm, text(size: 11pt)[#sym.convolve #h(0.12cm)])],
 	))
+
+	#show list: l => {
+		l
+		fix_311
+	}
 	//#set list(marker: (level) => {
 	//	// move is a hotfix for #1204. Won't work with different sizes/objects, so
 	//	// listing can only be used for regular text for now.
