@@ -13,6 +13,10 @@ typst init @local/isec-master-thesis-template:1.0.0 thesis
 cd thesis
 ```
 
+> [!NOTE]  
+> There's a current effort for publishing the template in Typst Universe so that
+> the initial clone is not needed. [Merge request](https://github.com/typst/packages/pull/1548)
+
 ## Typst
 
 ### What's Typst?
