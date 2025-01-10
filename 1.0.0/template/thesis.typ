@@ -33,6 +33,14 @@
     conclusions and calls to action that you have, e.g., apply the idea more
     broadly, get rid of some technology, find a countermeasure, or similar.
   ],
+	kurzfassung: ( // Multi-language support. Set to none to disable.
+		"title": [Kurzfassung],
+		"abstract": [
+			Deutsche Kurzfassung der Abschlussarbeit (maximal eine Seite)
+		],
+		"ktitle": "Schlagwörter",
+		"keywords": ([Einige Stichwörter...],),
+	),
   keywords: ([Broad keyword], [Keyword], [Specific Keyword],
              [Another specific keyword]),
 	notations: ((

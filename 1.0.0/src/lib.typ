@@ -5,6 +5,7 @@
 #import "pages/acknowledgements.typ": *
 #import "pages/acronyms.typ": *
 #import "pages/notations.typ": *
+#import "pages/kurzfassung.typ": *
 #import "helper.typ": *
 
 // Downstream package with extra functionalities
@@ -20,6 +21,7 @@
 	date: none,
 	acknowledgements: none,
 	abstract: none, 
+	kurzfassung: none, 
 	keywords: none,
 	notations: none,
 	acronyms: none,
@@ -155,7 +157,8 @@
 		// TODO: come with a better solution...
 		#let whtl = ([Bibliography], [Abstract], [Contents], [List of Figures],
 								 [List of Tables], [List of Listings], [Acknowledgements], 
-								 [Acronyms], [Notation], )
+								 [Acronyms], [Notation],
+								 if kurzfassung != none [#kurzfassung.at("title")])
 
 		// Forced page break (new chapter)
 		#pagebreak()
@@ -198,6 +201,7 @@
 	// - Affidavit
 	// - Acknowledgements
 	// - Abstract
+	// - Kurzfassung
 	// - Outline(s): Sections, Figures, Tables, Listings
 
 	#context [
@@ -214,6 +218,16 @@
 
 		// Show abstract page
 		#abstract_page(abstract, keywords)
+
+		// Show kurzfassung page
+		#if kurzfassung != none [
+			#kurzfassung_page(
+					kurzfassung.at("title"),
+					kurzfassung.at("abstract"),
+					kurzfassung.at("ktitle"),
+					kurzfassung.at("keywords"),
+			)
+		]
 
 		// Table of Contents
 		#toc_page(
