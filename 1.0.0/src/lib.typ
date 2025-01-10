@@ -334,7 +334,7 @@
 		v(0.2cm)
 		grid(gutter: 0pt, align: left, inset: 0pt, columns: (3%, 1fr, 3%),
 			box[],
-			block(stroke: 0.5pt + black, inset: 0.25cm, width: 100%)[
+			block(stroke: 0.5pt + black, inset: 0.25cm, width: 100%, clip: true)[
 				#code
 			],
 			box[],
