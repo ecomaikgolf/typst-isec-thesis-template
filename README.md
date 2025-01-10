@@ -60,7 +60,7 @@ click to jump, etc.
 
 Template closely follows [Maria's LaTeX
 Template](https://extgit.isec.tugraz.at/castle/student/templates/master-thesis/-/tree/main/thesis)
-design from the institute (with the ISEC renaming).
+design from the institute.
 
 There's a few differences between the original and the Typst version that won't
 be changed as I prefer as it is here. Nothing reallty important, just small
