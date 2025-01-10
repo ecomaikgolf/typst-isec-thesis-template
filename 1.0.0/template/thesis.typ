@@ -58,16 +58,6 @@
 //
 // Welcome to the starting point of your final Master Thesis :) Congrats!
 //
-// Nice that you've chosen Typst as your typesetting system, you'll enjoy:
-//
-// - Milisecond incremental builds
-// - Subsecond full builds
-// - Multithreaded builds per pagebreak
-// - Easy rustc-like comiler error messages (and no intermediates!)
-// - Transparent multiple compiler passes (no more mklatex/makefiles)
-// - Simple & powerful scripting and syntax
-// - WebAssembly plugin support (python/js interpreters in your thesis? Yes)
-//
 // Typst quickstart:
 //
 // - $ typst watch thesis.typ    (Incremental build, recommended)
@@ -97,7 +87,7 @@
 // - Keep code/text formatted at 80 cols as in this example
 // - Use tinymist for previewing changes (faster than typst watch)
 // - Force #pagebreak() if your document is long. This triggers multithr. builds 
-// - Keep in mind Typst updates breaks API for now (still 0.X.X)
+// - Keep in mind Typst breaks API for now (still 0.X.X), so update or freeze
 //
 // Bugs, limitations, differences:
 //
@@ -107,7 +97,7 @@
 //
 // Now that you know everything important, I recommend removing this comment
 //
-// Good luck and happy writing,
+// Happy writing and good luck defending!
 // Ernesto - ecomaikgolf.com
 //
 // -------------------------------[[ CUT HERE ]]--------------------------------
@@ -186,6 +176,8 @@
 #show: appendix
 
 = Code Listings<sec:codelistings>
+
+
 
 
 // vim:tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab colorcolumn=81

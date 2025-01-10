@@ -22,10 +22,10 @@ A modern typesetting system which has:
 - Milisecond incremental builds¹
 - Subsecond full builds¹
 - Multithreaded builds per pagebreak
-- Easy rustc-like comiler error messages (and no intermediates!)
+- Easy rustc-like compiler error messages (and no intermediates!)
 - Transparent multiple compiler passes (no more mklatex/makefiles)
 - Simple & powerful scripting and syntax
-- WebAssembly plugin support (python/js interpreters in your thesis? Yes)
+- WebAssembly plugin support (python/js interpreters in your thesis? Sure)
 
 Migrating from LaTeX? Check the [migration guide](https://typst.app/docs/guides/guide-for-latex-users/)
 
