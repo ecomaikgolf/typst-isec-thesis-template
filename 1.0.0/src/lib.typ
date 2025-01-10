@@ -34,7 +34,6 @@
 	// --------------------------------------------------------------------------
 	// Acronyms
 
-	// Fill the global acronym dict with user acronyms
 	#if acronyms != none [ #init-acronyms(acronyms) ]
 
 	#if notations != none [ #init-notations(notations) ]
@@ -166,9 +165,6 @@
 		#block(sticky: true)[
 			#v(weak: false, 1.75cm)
 			// Show Chapter + X
-			// TODO: extend to better solution for appendix, etc. We can have a global
-			// mutable variable that gets set when Bibliography appears, and starting
-			// from there, we change the display to Appendix
 			#if not whtl.contains(it.body) [
 				#it.supplement #counter(heading).display(it.numbering)
 					#v(0.38cm)
