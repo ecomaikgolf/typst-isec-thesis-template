@@ -31,6 +31,9 @@
 	body
 ) = [
 
+	// Hotfix to properly cite in abstract
+	#set cite(style: "alphanumeric")
+
 	// --------------------------------------------------------------------------
 	// Acronyms
 
