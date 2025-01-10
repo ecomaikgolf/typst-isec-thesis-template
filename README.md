@@ -79,7 +79,7 @@ typesetting/design choices. Check the differences
 ![acknowledgements](https://github.com/user-attachments/assets/8ab9dde7-678b-4b59-8a2c-14dc5b0305e2)
 ![abstract](https://github.com/user-attachments/assets/ca700eb5-3c88-4fef-a62f-c2c6cb81a6a5)
 ![kurzfassung](https://github.com/user-attachments/assets/ffde8e2d-d3d5-45bd-a188-b4c6b9b5175d)
-![contents](https://github.com/user-attachments/assets/726115da-81f2-4100-ac3b-014044ba3250)
+![contents](https://github.com/user-attachments/assets/6edf6084-2f88-4b61-966d-eec6af2ae403)
 ![text-content](https://github.com/user-attachments/assets/95d90667-b203-4004-bb73-5f4ca5dc7cd0)
 ![dummy-content](https://github.com/user-attachments/assets/25db8ec5-05a5-43b5-b649-0bbe0eca4459)
 ![listings-content](https://github.com/user-attachments/assets/527f041f-3f85-447e-bf8e-f4e6059a0242)
