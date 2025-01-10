@@ -85,5 +85,5 @@ typesetting/design choices. Check the differences
 ![listings-content](https://github.com/user-attachments/assets/527f041f-3f85-447e-bf8e-f4e6059a0242)
 ![notation](https://github.com/user-attachments/assets/030cc805-4745-42f7-b404-6f00a66c8442)
 ![acronyms](https://github.com/user-attachments/assets/96199ddf-4929-4948-b431-78a0d84d431f)
-![bibliography](https://github.com/user-attachments/assets/9d63d990-9c36-4277-a495-95ad5d4767d3)
+![bibliography](https://github.com/user-attachments/assets/f5afef77-4897-466b-8f38-1a92fc2f8b26)
 ![appendix](https://github.com/user-attachments/assets/c6e2b758-bb9d-4808-a0cb-3386e5aba9d2)
