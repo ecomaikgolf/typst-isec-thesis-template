@@ -44,7 +44,7 @@
 	// --------------------------------------------------------------------------
 	// Text
 
-	#set text(font: "New Computer Modern", lang: "en")
+	#set text(font: "New Computer Modern", lang: "en", region: "US")
 
 	// --------------------------------------------------------------------------
 	// PDF Metadata
