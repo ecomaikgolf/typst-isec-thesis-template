@@ -259,7 +259,7 @@
 		numbering("1.1", counter(heading).get().first(), num)
 	)
 	// Spacing from next/prev content
-	#show figure: set block(above: 0.48cm, below: 0.48cm)
+	#show figure: set block(above: 0.4cm, below: 0.3cm)
 	// Caption style
 	#show figure.caption: it => context [
 		#v(0.3cm)
@@ -278,7 +278,7 @@
 	// Special case for listings (less marging
 	// TODO: these negative spaces are a bit spaghetti I recognize
 	#show figure.caption.where(kind: raw): it => context [
-		#v(-0.28cm)
+		#v(-0.32cm)
 		#grid(
 			columns: 2,
 			gutter: 0cm,
@@ -290,7 +290,6 @@
 				#align(left)[#it.body]
 			],
 		)
-		#v(-0.2cm)
 	]
 	// Fix #311 issue (paragraph indent)
 	#show figure: it => context [
