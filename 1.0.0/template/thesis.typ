@@ -62,8 +62,7 @@
 //
 // - $ typst watch thesis.typ    (Incremental build, recommended)
 // - $ typst compile thesis.typ  (Plain build, not recommended for editing)
-// - $ tinymist preview --partial-rendering --host localhost:8080 thesis.typ
-//     (Faster preview, recommended for live previews) [See Typst LSP]
+// - * tinymist :TypstPreview (neovim) or VSCode plugin (Best for live preview)
 //
 // Typst documentation, guides & help:
 //
