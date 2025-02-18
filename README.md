@@ -1,21 +1,16 @@
 # ISEC Master's Thesis Template
 
-Install with:
+Quickstart:
 
 ```sh
-git clone https://github.com/ecomaikgolf/typst-isec-master-thesis-template ~/.local/share/typst/packages/local/isec-master-thesis-template/
+typst init @preview/definitely-not-isec-thesis:1.0.0 thesis
 ```
 
-Start new thesis with the template:
-
-```sh
-typst init @local/isec-master-thesis-template:1.0.0 thesis
-cd thesis
-```
+Tested typst version: `0.12.0`.
 
 > [!NOTE]  
-> There's a current effort for publishing the template in Typst Universe so that
-> the initial clone is not needed. [Merge request](https://github.com/typst/packages/pull/1548)
+> If you are an ISEC or TUGraz employee and think that `isec-thesis` or
+> `tugraz-thesis` fits more, I would need an approval to allocate the name :)
 
 ## Typst
 
@@ -23,7 +18,7 @@ cd thesis
 
 A modern typesetting system which has:
 
-- Milisecond incremental builds¹
+- Milisecond incremental (memoized) builds¹
 - Subsecond full builds¹
 - Multithreaded builds per pagebreak
 - Easy rustc-like compiler error messages (and no intermediates!)
@@ -34,7 +29,7 @@ A modern typesetting system which has:
 Migrating from LaTeX? Check the [migration guide](https://typst.app/docs/guides/guide-for-latex-users/)
 
 ¹: This is obviously not a serious benchmark and depends on the document. But
-   it's hella fast trust me
+   it's fast trust me
 
 ### Quick usage
 
@@ -86,3 +81,15 @@ typesetting/design choices. Check the differences
 ![acronyms](https://github.com/user-attachments/assets/96199ddf-4929-4948-b431-78a0d84d431f)
 ![bibliography](https://github.com/user-attachments/assets/f5afef77-4897-466b-8f38-1a92fc2f8b26)
 ![appendix](https://github.com/user-attachments/assets/c6e2b758-bb9d-4808-a0cb-3386e5aba9d2)
+
+## License `src/assets/tuglogo.svg`
+
+According to Wikipedia:
+
+"""
+This logo image consists only of simple geometric shapes or text. It does not
+meet the threshold of originality needed for copyright protection, and is
+therefore in the public domain. [...]
+""""
+
+https://en.m.wikipedia.org/wiki/File:TU_Graz.svg
