@@ -4,7 +4,7 @@ An unofficial ISEC TUGraz Master's Thesis template
 
 Author: Ernesto Martínez García <[ecomaikgolf.com](https://ecomaikgolf.com)>
 
-> [!NOTE]  
+> [!NOTE]
 > If you are an ISEC or TUGraz employee and want it renamed to `isec-thesis` or
 > `tugraz-thesis` I would need an approval to allocate the name :)
 
@@ -45,10 +45,8 @@ Check for [open issues](https://github.com/ecomaikgolf/typst-isec-master-thesis-
 
 According to Wikipedia:
 
-"""
-This logo image consists only of simple geometric shapes or text. It does not
-meet the threshold of originality needed for copyright protection, and is
-therefore in the public domain. [...]
-""""
+> This logo image consists only of simple geometric shapes or text. It does not
+> meet the threshold of originality needed for copyright protection, and is
+> therefore in the public domain. [...]
 
 https://en.m.wikipedia.org/wiki/File:TU_Graz.svg
