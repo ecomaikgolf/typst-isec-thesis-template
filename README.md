@@ -8,7 +8,7 @@ typst init @preview/definitely-not-isec-thesis:1.0.0 thesis
 
 Tested typst version: `0.12.0`.
 
-> [!NOTE]  
+> [!NOTE]
 > If you are an ISEC or TUGraz employee and think that `isec-thesis` or
 > `tugraz-thesis` fits more, I would need an approval to allocate the name :)
 
@@ -86,10 +86,8 @@ typesetting/design choices. Check the differences
 
 According to Wikipedia:
 
-"""
-This logo image consists only of simple geometric shapes or text. It does not
-meet the threshold of originality needed for copyright protection, and is
-therefore in the public domain. [...]
-""""
+> This logo image consists only of simple geometric shapes or text. It does not
+> meet the threshold of originality needed for copyright protection, and is
+> therefore in the public domain. [...]
 
 https://en.m.wikipedia.org/wiki/File:TU_Graz.svg
