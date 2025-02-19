@@ -1,16 +1,21 @@
 # ISEC Master's Thesis Template
 
-Quickstart:
+Quickstart (CLI):
 
 ```sh
 typst init @preview/definitely-not-isec-thesis:1.0.0 thesis
 ```
 
-Tested typst version: `0.12.0`.
+Quickstart (WebIDE):
+
+- [Create Document](https://typst.app/app?template=definitely-not-isec-thesis&version=1.0.0)
+- [Homepage](https://typst.app/universe/package/definitely-not-isec-thesis)
 
 > [!NOTE]
 > If you are an ISEC or TUGraz employee and think that `isec-thesis` or
 > `tugraz-thesis` fits more, I would need an approval to allocate the name :)
+
+Tested typst version: `0.12.0`.
 
 ## Typst
 
