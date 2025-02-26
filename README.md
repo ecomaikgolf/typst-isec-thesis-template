@@ -3,12 +3,12 @@
 Quickstart (CLI):
 
 ```sh
-typst init @preview/definitely-not-isec-thesis:1.0.0 thesis
+typst init @preview/definitely-not-isec-thesis:2.0.0 thesis
 ```
 
 Quickstart (WebIDE):
 
-- [Create Document](https://typst.app/app?template=definitely-not-isec-thesis&version=1.0.0)
+- [Create Document](https://typst.app/app?template=definitely-not-isec-thesis&version=2.0.0)
 - [Homepage](https://typst.app/universe/package/definitely-not-isec-thesis)
 
 > [!NOTE]
