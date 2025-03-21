@@ -15,7 +15,7 @@ Quickstart (WebIDE):
 > If you are an ISEC or TUGraz employee and think that `isec-thesis` or
 > `tugraz-thesis` fits more, I would need an approval to allocate the name :)
 
-Tested typst version: `0.12.0`.
+Tested typst version: `0.13.1`.
 
 ## Typst
 
