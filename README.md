@@ -47,7 +47,7 @@ typst watch thesis.typ
 then open the generated PDF:
 
 ```sh
-xdg-open thesis.typ
+xdg-open thesis.pdf
 ```
 
 Now edit `thesis.typ` and it will be incrementally built in each save.
