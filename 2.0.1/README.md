@@ -1,64 +1,12 @@
 # ISEC Master's Thesis Template
 
-Quickstart (CLI):
+An unofficial ISEC TUGraz Master's Thesis template
 
-```sh
-typst init @preview/definitely-not-isec-thesis:2.0.1 thesis
-```
-
-Quickstart (WebIDE):
-
-- [Create Document](https://typst.app/app?template=definitely-not-isec-thesis&version=2.0.0)
-- [Homepage](https://typst.app/universe/package/definitely-not-isec-thesis)
+Author: Ernesto Martínez García <[ecomaikgolf.com](https://ecomaikgolf.com)>
 
 > [!NOTE]
-> If you are an ISEC or TUGraz employee and think that `isec-thesis` or
-> `tugraz-thesis` fits more, I would need an approval to allocate the name :)
-
-Tested typst version: `0.13.1`.
-
-## Typst
-
-### What's Typst?
-
-A modern typesetting system which has:
-
-- Milisecond incremental (memoized) builds¹
-- Subsecond full builds¹
-- Multithreaded builds per pagebreak
-- Easy rustc-like compiler error messages (and no intermediates!)
-- Transparent multiple compiler passes (no more mklatex/makefiles)
-- Simple & powerful scripting and syntax
-- WebAssembly plugin support (python/js interpreters in your thesis? Sure)
-
-Migrating from LaTeX? Check the [migration guide](https://typst.app/docs/guides/guide-for-latex-users/)
-
-¹: This is obviously not a serious benchmark and depends on the document. But
-   it's fast trust me
-
-### Quick usage
-
-Start incremental compilations with:
-
-```sh
-typst watch thesis.typ
-```
-
-then open the generated PDF:
-
-```sh
-xdg-open thesis.pdf
-```
-
-Now edit `thesis.typ` and it will be incrementally built in each save.
-
-Incremental builds are blazingly fast, but regular PDF rendering (on the
-viewer) is a bottleneck here. 
-
-Use tinymist with neovim's `:TypstPreview` (or VSCode plugin), which uses the
-browser to do PDF partial renderings and previews will be even more responsive.
-No need for running `typst watch` now. It even has features like cursor sync,
-click to jump, etc.
+> If you are an ISEC or TUGraz employee and want it renamed to `isec-thesis` or
+> `tugraz-thesis` I would need an approval to allocate the name :)
 
 ## Design
 
@@ -68,8 +16,14 @@ design from the institute.
 
 There's a few differences between the original and the Typst version that won't
 be changed as I prefer as it is here. Nothing reallty important, just small
-typesetting/design choices. Check the differences
+typesetting/design choices. Check the reported differences
 [here](https://github.com/ecomaikgolf/typst-iaik-master-thesis-template/issues?q=is%3Aissue+is%3Aopen+label%3Adiff)
+
+## Contributing
+
+Contribute to the template in the [upstream repository](https://github.com/ecomaikgolf/typst-isec-master-thesis-template)
+
+Check for [open issues](https://github.com/ecomaikgolf/typst-isec-master-thesis-template/issues)
 
 ## Samples
 
