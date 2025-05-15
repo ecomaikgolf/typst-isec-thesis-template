@@ -40,7 +40,7 @@
 								#locs.map(
 									l => counter(page).at(l.location())).flatten().map(
 										l => str(l)
-									).join(", ")
+									).dedup().join(", ")
 							]
 					],
 				)
