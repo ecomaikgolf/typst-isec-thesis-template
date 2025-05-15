@@ -302,7 +302,7 @@
 		#grid(
 			columns: 2,
 			gutter: 0cm,
-			align: left,
+			align: left + top,
 			box[
 				#it.supplement~#it.counter.display()#it.separator
 			],
@@ -318,7 +318,7 @@
 		#grid(
 			columns: 2,
 			gutter: 0cm,
-			align: left,
+			align: left + top,
 			box[
 				#it.supplement~#it.counter.display()#it.separator
 			],
