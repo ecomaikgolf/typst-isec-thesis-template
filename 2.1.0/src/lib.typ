@@ -298,13 +298,15 @@
 	#show figure: set block(above: 0.4cm, below: 0.3cm)
 	// Caption style
 	#show figure.caption: it => context [
-		#v(0.3cm)
+		#let size = measure(it.body)
+		#let empty = size.width <= 0pt
+		#if it.kind != raw [ #v(0.3cm) ] else [ #v(-0.2cm) ]
 		#grid(
 			columns: 2,
 			gutter: 0cm,
 			align: left + top,
 			box[
-				#it.supplement~#it.counter.display()#it.separator
+				#it.supplement~#it.counter.display()#if empty [.] else [#it.separator]
 			],
 			box[
 				#align(left)[#it.body]
@@ -313,20 +315,10 @@
 	]
 	// Special case for listings (less marging
 	// TODO: these negative spaces are a bit spaghetti I recognize
-	#show figure.caption.where(kind: raw): it => context [
-		#v(-0.32cm)
-		#grid(
-			columns: 2,
-			gutter: 0cm,
-			align: left + top,
-			box[
-				#it.supplement~#it.counter.display()#it.separator
-			],
-			box[
-				#align(left)[#it.body]
-			],
-		)
-	]
+	//#show figure.caption.where(kind: raw): it => context [
+	//	#v(-0.32cm)
+	//	it
+	//]
 	// Fix #311 issue (paragraph indent)
 	#show figure: it => context [
 		#it

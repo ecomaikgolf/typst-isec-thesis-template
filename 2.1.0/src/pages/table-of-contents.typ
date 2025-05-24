@@ -24,11 +24,12 @@
 #let print-trimmed(cap) = [
 	#let num = 55
 	#let c = cap //content-to-string(cap)
-	#if c.len() > num [
-		#let tr = c.slice(0, num).split(" ").slice(0, -1).join(" ")
+	#if c == none	[
+	] else if c.len() > num [
+		#let tr = c.slice(0, num).split(" ").slice(0, -1).join(" ").trim()
 		#tr #text(size: 9pt, "(...)")
 	] else [
-		#c
+		#c.trim()
 	]
 ]
 
@@ -176,43 +177,70 @@
 	// Figures
 
 	// Style of Level 1 Figures
-	#show outline.entry.where(level: 1): it => [
+	#show outline.entry.where(level: 1): it => context [
+
 		#let loc  = it.element.location()
 		#let name = it.element.body
 		#let sec  = it.prefix().children.at(2)
-		#let cap  = it.element.caption.body
+		#let cap  = if it.element.caption == none [] else [#it.element.caption.body]
 		#let page = it.page()
 
-		//// 1.1. Figure Caption . . . . . . . . . . . . . . . . . . . . . . . . . 12
-		#link(loc,
-			grid(columns: (0.6cm, auto, 0.2cm, auto, 0.15cm, 1fr, 0.2cm, auto),
-				gutter: 0pt, rows: 1,
-				box[
-					// Spacing
-				],
-				box[
-					#sec.
-				],
-				box[
-					// Spacing
-				],
-				box[
-					#print-trimmed(content-to-string(cap))
-				],
-				box[
-					// Spacing
-				],
-				box[
-					#ruler
-				],
-				box[
-					// Spacing
-				],
-				box[
-					#page
-				],
+		//// 1.1. Figure Caption . . . . . . . . . . . . . . . . . . . . . . .. 12
+		#if measure(cap).width > 0pt [
+			#link(loc,
+				grid(columns: (0.6cm, auto, 0.2cm, auto, 0.15cm, 1fr, 0.2cm, auto),
+					gutter: 0pt, rows: 1,
+					box[
+						// Spacing
+					],
+					box[
+						#sec.
+					],
+					box[
+						// Spacing
+					],
+					box[
+						#print-trimmed(content-to-string-omit(cap))
+					],
+					box[
+						// Spacing
+					],
+					box[
+						#ruler
+					],
+					box[
+						// Spacing
+					],
+					box[
+						#page
+					],
+				)
 			)
-		)
+		] else [
+			#link(loc,
+				grid(columns: (0.6cm, auto, 0.2cm, 1fr, 0.2cm, auto),
+					gutter: 0pt, rows: 1,
+					box[
+						// Spacing
+					],
+					box[
+						#sec.
+					],
+					box[
+						// Spacing
+					],
+					box[
+						#ruler
+					],
+					box[
+						// Spacing
+					],
+					box[
+						#page
+					],
+				)
+			)
+		]
 	]
 
 	#if list-of-figures [

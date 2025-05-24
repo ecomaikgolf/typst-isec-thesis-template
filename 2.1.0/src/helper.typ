@@ -24,6 +24,22 @@
   }
 }
 
+#let content-to-string-omit(content) = {
+  if content.has("text") {
+    content.text
+  }else if content.has("child") {
+    content-to-string-omit(content.child)
+  } else if content.has("children") {
+    content.children.map(content-to-string-omit).join("")
+  } else if content.has("body") {
+    content-to-string-omit(content.body)
+  } else if content == [ ] {
+    " "
+  } else {
+    "..."
+  }
+}
+
 // partitle simulates \paragraph{title} (more or less)
 #let partitle(title: [Title], body) = context [
   #block(above: 0.8cm)[
