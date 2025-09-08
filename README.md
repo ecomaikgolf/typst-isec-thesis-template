@@ -17,6 +17,8 @@ Quickstart (WebIDE):
 
 Tested typst version: `0.13.1`.
 
+Need some slides? Check out the sibling package [definitely-not-isec-slides](https://github.com/ecomaikgolf/typst-isec-slides-template)
+
 ## Typst
 
 ### What's Typst?
